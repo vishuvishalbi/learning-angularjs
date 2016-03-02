@@ -1,0 +1,15 @@
+<nav  ng-show="!currentUser">
+  <ul class="nav masthead-nav">
+    <li ng-class="homeActive" ng-click="navClick($event)"><a href="#/">Home</a></li>
+    <li ng-class="loginActive"  ng-click="navClick($event)"><a href="#/login">Login</a></li>
+    <li ng-class="registerActive" ng-click="navClick($event)"><a href="#/register">Register</a></li>
+  </ul>
+</nav>
+<nav>
+  <ul class="nav masthead-nav" ng-show="currentUser" >
+      <li><a ng-href="#/login" ng-click="logout()">I am logged in </a></li>
+      <li><a ng-href="#/login" ng-click="logout()">logout</a></li>
+    <li><a>{{currentUser.firstname}}</a></li>
+    <li>{{currentUser.lastname}}</li>
+  </ul>
+</nav>
