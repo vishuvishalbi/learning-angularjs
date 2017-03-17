@@ -23,8 +23,8 @@ var io = socketio.listen(server);
 router.use(express.static(path.resolve(__dirname, 'client')));
 
 router.get('/', function(req, res){ 
-    res.send('Hi ');
-    //res.sendFile(path.resolve(__dirname, 'client'));
+    //res.send('Hi ');
+    res.sendFile(path.resolve(__dirname, 'client', 'indexChat.html'));
 })
 var messages = [];
 var sockets = [];
