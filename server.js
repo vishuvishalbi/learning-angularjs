@@ -24,7 +24,7 @@ router.use(express.static(path.resolve(__dirname, 'client')));
 
 router.get('/', function(req, res){ 
     //res.send('Hi ');
-    res.sendFile(path.resolve(__dirname, 'client', 'indexChat.html'));
+    res.sendFile(path.resolve(__dirname, 'angularjs'));
 })
 var messages = [];
 var sockets = [];
