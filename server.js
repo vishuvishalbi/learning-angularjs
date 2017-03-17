@@ -23,7 +23,7 @@ var io = socketio.listen(server);
 router.use(express.static(path.resolve(__dirname, 'client')));
 
 router.get('/', function(req, res){ 
-    res.send('hi');
+    res.sendFile(path.resolve(__dirname, 'client'));
 })
 var messages = [];
 var sockets = [];
